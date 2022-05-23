@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cadastro de Aluno</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script defer async src='main.js'></script>
+</head>
+
+<body>
+    <header>
+        <span>SIGAA 2</span>
+    </header>
+
+    <main>
+
+        <div class="search">
+            <input>
+            <div class="action-bar">
+                <button>Pesquisar</button>
+                <button class="bt-add">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="container-data">
+            <template class="aluno">
+                <div class="modal">
+                    <h1>Cadastrar pessoa</h1>
+                    <form>
+                        <div>
+                            <label for="nome">Nome</label>
+                            <input name="nome" id="nome" type="text" placeholder="nome completo">
+                        </div>
+                        <div>
+                            <label for="dataNasc">Data de Nascimento</label>
+                            <input name="dataNasc" id="dataNasc" type="date">
+                        </div>
+                        <div>
+                            <label for="matricula">Matrícula</label>
+                            <input data-mascara="matricula" name="matricula" id="matricula" type="text"
+                                placeholder="ex.: 2020923746">
+                        </div>
+                    </form>
+                    <div class="action">
+                        <button class="bt-close">Excluir</button>
+                        <button class="bt-save">Salvar</button>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

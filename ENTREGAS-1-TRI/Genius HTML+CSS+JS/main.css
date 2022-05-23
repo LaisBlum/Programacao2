@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@700&family=Sarala:wght@400;700&display=swap');
+
+:root {
+    --color-a: #2ecc71;
+    --color-b: #9b59b6;
+    --color-c: #e74c3c;
+    --color-d: #e67e22;
+    --color-bg: #262129;
+    --color-bgModal: #262129cd;
+    --colorCaracters: #FFFFFF;
+    --btn-primary: #E2E1E1;
+    --btn-secundary: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--color-bg);
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+@keyframes piscadela {
+    50% {
+        background-color: white;
+    }
+}
+
+main {
+    position: relative;
+    height: 70vmin;
+    width: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cnt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: var(--color-bg);
+    height: 28vmin;
+    width: 28vmin;
+    border-radius: 50%;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    color: var(--colorCaracters);
+    font-size: 6.8rem;
+}
+
+main>div.color {
+    width: 50%;
+    flex: none;
+    cursor: pointer;
+}
+
+main>div.color:nth-child(1) {
+    background-color: var(--color-a);
+    border-radius: 100% 0 0 0;
+}
+
+main>div.color:nth-child(2) {
+    background-color: var(--color-b);
+    border-radius: 0 100% 0 0;
+}
+
+main>div.color:nth-child(3) {
+    background-color: var(--color-c);
+    border-radius: 0 0 0 100%;
+}
+
+main>div.color:nth-child(4) {
+    background-color: var(--color-d);
+    border-radius: 0 0 100% 0;
+}
+
+main>div.animate {
+    animation: piscadela .3s ease-in-out;
+}
+
+.modalContainer {
+    background-color: var(--color-bgModal);
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+div.hide {
+    visibility: hidden;
+}
+
+.modal {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    height: 35vmin;
+    width: 75vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal>div.data {
+    width: 50%;
+    color: var(--colorCaracters);
+    text-align: center;
+}
+
+.start {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    background-color: var(--btn-primary);
+    border: none;
+    border-radius: 8%;
+    cursor: pointer;
+    height: 8vmin;
+    width: 12vmin;
+    color: var(--color-bg);
+    text-align: center;
+}
+
+.start:hover {
+    background-color: var(--btn-secundary);
+}
+
+.gameover {
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    color: var(--colorCaracters);
+    padding: 2vmin;
+}
